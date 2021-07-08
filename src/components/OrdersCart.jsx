@@ -2,7 +2,7 @@ import {useContext} from 'react';
 import {ShopContext} from '../context';
 import {BasketItem} from './BasketItem'
 
-function BasketList() {
+function OrdersCart() {
     const {order = [], handleBasketShow = () => {}} = useContext(ShopContext)
 
     const totalPrice = order.reduce((sum,el) => {
@@ -12,8 +12,8 @@ function BasketList() {
     }, 0)
 
     return (
-        <ul className="collection basket-list">
-            <li className="collection-item active">Корзина</li>
+        <ul className="collection ">
+            <li className="collection-item active">Мои заказы</li>
             {
                 order.length ? order.map(item => (
                     <BasketItem key={item.id} {...item}/>
@@ -29,4 +29,4 @@ function BasketList() {
         </ul>)
 }
 
-export {BasketList}
+export {OrdersCart}
