@@ -12,20 +12,19 @@ function OrdersCart() {
     }, 0)
 
     return (
-        <ul className="collection ">
-            <li className="collection-item active">Мои заказы</li>
+        <ul className="collection light-green lighten-2">
+
+            <li className="collection-item avatar">
+                <h2>Ваши заказы</h2></li>
             {
                 order.length ? order.map(item => (
                     <BasketItem key={item.id} {...item}/>
-                )) : <li className="collection-item">Корзина пуста</li>
+                )) : <li className="collection-item light-green lighten-2">Корзина пуста</li>
             }
-            <li className="collection-item active">
-                Общая стоимость(со скидкой):{totalPrice}$
+            <li className="collection-item active light-green lighten-2">
+                Общая стоимость(со скидкой): {totalPrice}$
             </li>
-            <li className="collection-item">
-                <button className="btn btn-small">Оформить</button>
-            </li>
-            <i className="material-icons basket-close" onClick={handleBasketShow}>close</i>
+            <i className="material-icons basket-close " onClick={handleBasketShow}>close</i>
         </ul>)
 }
 
