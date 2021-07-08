@@ -13,7 +13,6 @@ function OrdersCart() {
 
     return (
         <ul className="collection light-green lighten-2">
-
             <li className="collection-item avatar">
                 <h2>Ваши заказы</h2></li>
             {
